@@ -1,0 +1,26 @@
+{
+  "comments": [
+    {
+      "text": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.",
+      "author": "T.Hanks",
+      "date": 1543623304074,
+      "avatar": "https://d-pt.ppstatic.pl/kadry/k/r/1/06/da/57ecbc646b4fc_o,size,640x400,q,71,h,3003c4.jpg",
+      "id": 1
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.",
+      "author": "T.Hanks",
+      "date": 1543691928166,
+      "avatar": "https://d-pt.ppstatic.pl/kadry/k/r/1/06/da/57ecbc646b4fc_o,size,640x400,q,71,h,3003c4.jpg",
+      "id": 2
+    }
+  ],
+  "user": {
+    "likes": 157,
+    "followers": 273,
+    "following": 51,
+    "avatar": "https://i.wpimg.pl/O/150x200/i.wp.pl/a/f/film/018/40/95/0199540.jpg",
+    "name": "Brad Pitt",
+    "address": "Los Angeles, USA"
+  }
+}

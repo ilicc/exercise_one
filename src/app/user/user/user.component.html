@@ -1,0 +1,73 @@
+<div class="user-container">
+  <div class="user-background"></div>
+  <mat-card class="user-header">
+    <mat-icon class="user-header-url" (click)="openDialog()"
+      >open_in_new</mat-icon
+    >
+    <mat-card-header class="user-header-header">
+      <div
+        mat-card-avatar
+        class="user-header-image"
+        [ngStyle]="{ 'background-image': 'url(' + user.avatar + ')' }"
+      ></div>
+        <mat-card-title class="user-header-title"
+          >{{ user.name }}
+          <mat-icon class="header-heart" (click)="addLike(user)"
+            >favorite_border</mat-icon
+          ></mat-card-title
+        >
+        <mat-card-subtitle class="user-header-subtitle">
+          {{ user.address }}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="user-header-content">
+      <div class="user-header-content-wraper">
+        <p class="user-header-content-number">{{ user.likes }}</p>
+        <p class="user-header-content-title">Likes</p>
+      </div>
+      <div class="user-header-content-wraper">
+        <p class="user-header-content-number">{{ user.following }}</p>
+        <p class="user-header-content-title">Following</p>
+      </div>
+      <div class="user-header-content-wraper">
+        <p class="user-header-content-number">{{ user.followers }}</p>
+        <p class="user-header-content-title">Followers</p>
+      </div>
+      <div>
+        <button mat-raised-button (click)="addFollower(user)">FOLLOW</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="comments">
+    <mat-card-title class="comments-title"
+      ><span class="hide-comments" (click)="hideComments()"
+        >{{ hideOrShow }} comments ({{ baseCommentList.length }})</span
+      ></mat-card-title
+    >
+    <mat-card-content class="comment-content">
+      <div *ngFor="let comment of commentList" class="comment">
+        <div class="comment-title">
+          <div
+            mat-card-avatar
+            [ngStyle]="{ 'background-image': 'url(' + comment.avatar + ')' }"
+            class="comment-image"
+          ></div>
+          <p class="comment-title-text">{{ comment.author }}</p>
+          <p class="comment-time">{{ comment.date }}d</p>
+        </div>
+        <div class="comment-text">{{ comment.text }}</div>
+      </div>
+    </mat-card-content>
+    <!-- input -->
+    <mat-form-field class="input-comment">
+      <input
+        matInput
+        class="input-comment"
+        [(ngModel)]="commentText"
+        #comment
+        (blur)="setPlaceholder()"
+        (focus)="clearInput()"
+      />
+    </mat-form-field>
+  </mat-card>
+</div>
